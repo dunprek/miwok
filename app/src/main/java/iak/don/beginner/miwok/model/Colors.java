@@ -1,12 +1,14 @@
 package iak.don.beginner.miwok.model;
 
+import android.graphics.drawable.Drawable;
+
 /**
- * Created by don on 11/27/2016.
+ * Created by don on 11/29/2016.
  */
-public class Model {
+public class Colors {
     private String english;
     private String miwok;
-    private String image;
+    private Drawable image;
     private String audio;
 
     public String getAudio() {
@@ -17,17 +19,22 @@ public class Model {
         this.audio = audio;
     }
 
-    public Model(String english, String miwok, String image) {
+    public Colors(String english, String miwok, Drawable image) {
+        this.english = english;
+        this.miwok = miwok;
+        this.image = image;
     }
 
-    public Model(String english, String miwok) {
+    public Colors(String english, String miwok) {
+        this.english = english;
+        this.miwok = miwok;
     }
 
-    public String getImage() {
+    public Drawable getImage() {
         return image;
     }
 
-    public void setImage(String image) {
+    public void setImage(Drawable image) {
         this.image = image;
     }
 

@@ -2,24 +2,22 @@ package iak.don.beginner.miwok.ui.fragment;
 
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
-import android.support.v7.widget.DefaultItemAnimator;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Toast;
 
 import java.util.ArrayList;
 
 import iak.don.beginner.miwok.R;
-import iak.don.beginner.miwok.adapter.Adapter;
-import iak.don.beginner.miwok.model.Model;
+import iak.don.beginner.miwok.adapter.ColorsAdapter;
+import iak.don.beginner.miwok.model.Colors;
 
 public class ColorsFragment extends Fragment {
-    ArrayList<Model> models = new ArrayList<>();
     private RecyclerView recyclerView;
-    private Adapter mAdapter;
+    private ColorsAdapter mAdapter;
+
 
     public ColorsFragment() {
         // Required empty public constructor
@@ -28,7 +26,6 @@ public class ColorsFragment extends Fragment {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
     }
 
     @Override
@@ -36,42 +33,26 @@ public class ColorsFragment extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View rootView = inflater.inflate(R.layout.fragment_colors, container, false);
-
-
         recyclerView = (RecyclerView) rootView.findViewById(R.id.rvColors);
+        prepareColorsData();
+        return rootView;
+    }
 
-        mAdapter = new Adapter(models);
+    private void prepareColorsData() {
+        ArrayList<Colors> models = new ArrayList<>();
+        models.add(new Colors(getActivity().getString(R.string.colors_eng_red),getActivity().getString(R.string.colors_mi_red),getActivity().getResources().getDrawable(R.mipmap.color_red)));
+        models.add(new Colors(getActivity().getString(R.string.colors_eng_green),getActivity().getString(R.string.colors_mi_green),getActivity().getResources().getDrawable(R.mipmap.color_green)));
+        models.add(new Colors(getActivity().getString(R.string.colors_eng_brown),getActivity().getString(R.string.colors_mi_brown),getActivity().getResources().getDrawable(R.mipmap.color_brown)));
+        models.add(new Colors(getActivity().getString(R.string.colors_eng_gray),getActivity().getString(R.string.colors_mi_gray),getActivity().getResources().getDrawable(R.mipmap.color_gray)));
+        models.add(new Colors(getActivity().getString(R.string.colors_eng_black),getActivity().getString(R.string.colors_mi_black),getActivity().getResources().getDrawable(R.mipmap.color_black)));
+        models.add(new Colors(getActivity().getString(R.string.colors_eng_white),getActivity().getString(R.string.colors_mi_white),getActivity().getResources().getDrawable(R.mipmap.color_white)));
+        models.add(new Colors(getActivity().getString(R.string.colors_eng_dusty_yellow),getActivity().getString(R.string.colors_mi_dusty_yellow),getActivity().getResources().getDrawable(R.mipmap.color_dusty_yellow)));
+        models.add(new Colors(getActivity().getString(R.string.colors_eng_mustard_yellow),getActivity().getString(R.string.colors_mi_mustard_yellow),getActivity().getResources().getDrawable(R.mipmap.color_mustard_yellow)));
 
         recyclerView.setHasFixedSize(true);
         RecyclerView.LayoutManager mLayoutManager = new LinearLayoutManager(getActivity().getApplicationContext());
         recyclerView.setLayoutManager(mLayoutManager);
-
+        mAdapter = new ColorsAdapter(getActivity().getApplicationContext(),models);
         recyclerView.setAdapter(mAdapter);
-
-        recyclerView.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-
-            }
-        });
-        prepareModelData();
-
-
-        return rootView;
     }
-
-
-
-    private void prepareModelData() {
-        models.add(new Model(String.valueOf(R.string.colors_eng_red),String.valueOf(R.string.colors_mi_red),String.valueOf(R.mipmap.color_red)));
-        models.add(new Model(String.valueOf(R.string.colors_eng_green),String.valueOf(R.string.colors_mi_green),String.valueOf(R.mipmap.color_green)));
-        models.add(new Model(String.valueOf(R.string.colors_eng_brown),String.valueOf(R.string.colors_mi_brown),String.valueOf(R.mipmap.color_brown)));
-        models.add(new Model(String.valueOf(R.string.colors_eng_gray),String.valueOf(R.string.colors_mi_gray),String.valueOf(R.mipmap.color_gray)));
-        models.add(new Model(String.valueOf(R.string.colors_eng_black),String.valueOf(R.string.colors_mi_black),String.valueOf(R.mipmap.color_black)));
-        models.add(new Model(String.valueOf(R.string.colors_eng_white),String.valueOf(R.string.colors_mi_white),String.valueOf(R.mipmap.color_white)));
-        models.add(new Model(String.valueOf(R.string.colors_eng_dusty_yellow),String.valueOf(R.string.colors_mi_dusty_yellow),String.valueOf(R.mipmap.color_dusty_yellow)));
-        models.add(new Model(String.valueOf(R.string.colors_eng_mustard_yellow),String.valueOf(R.string.colors_mi_mustard_yellow),String.valueOf(R.mipmap.color_mustard_yellow)));
-        mAdapter.notifyDataSetChanged();
-    }
-
 }

@@ -12,15 +12,12 @@ import android.view.ViewGroup;
 import java.util.ArrayList;
 
 import iak.don.beginner.miwok.R;
-import iak.don.beginner.miwok.adapter.Adapter;
-import iak.don.beginner.miwok.model.Model;
+import iak.don.beginner.miwok.adapter.ColorsAdapter;
+import iak.don.beginner.miwok.model.Colors;
 
 public class NumbersFragment extends Fragment{
-
-    ArrayList<Model> models = new ArrayList<>();
     private RecyclerView recyclerView;
-    private Adapter mAdapter;
-
+    private ColorsAdapter mAdapter;
 
     public NumbersFragment() {
         // Required empty public constructor
@@ -35,47 +32,32 @@ public class NumbersFragment extends Fragment{
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        View rootView = inflater.inflate(R.layout.fragment_colors, container, false);
+        View rootView = inflater.inflate(R.layout.fragment_numbers, container, false);
+        recyclerView = (RecyclerView) rootView.findViewById(R.id.rvNumbers);
+        prepareNumbersData();
+        return rootView;
+    }
 
-
-        recyclerView = (RecyclerView) rootView.findViewById(R.id.rvColors);
-
-        mAdapter = new Adapter(models);
+    private void prepareNumbersData() {
+        ArrayList<Colors> models = new ArrayList<>();
+        models.add(new Colors("test","testing",getActivity().getResources().getDrawable(R.mipmap.number_one)));
+        models.add(new Colors(getActivity().getResources().getString(R.string.numbers_eng_two),getActivity().getResources().getString(R.string.numbers_mi_two),getActivity().getResources().getDrawable(R.mipmap.number_two)));
+        models.add(new Colors(getActivity().getResources().getString(R.string.numbers_eng_three),getActivity().getResources().getString(R.string.numbers_mi_three),getActivity().getResources().getDrawable(R.mipmap.number_three)));
+        models.add(new Colors(getActivity().getResources().getString(R.string.numbers_eng_four),getActivity().getResources().getString(R.string.numbers_mi_four),getActivity().getResources().getDrawable(R.mipmap.number_four)));
+        models.add(new Colors(getActivity().getResources().getString(R.string.numbers_eng_five),getActivity().getResources().getString(R.string.numbers_mi_five),getActivity().getResources().getDrawable(R.mipmap.number_five)));
+        models.add(new Colors(getActivity().getResources().getString(R.string.numbers_eng_six),getActivity().getResources().getString(R.string.numbers_mi_six),getActivity().getResources().getDrawable(R.mipmap.number_six)));
+        models.add(new Colors(getActivity().getResources().getString(R.string.numbers_eng_seven),getActivity().getResources().getString(R.string.numbers_mi_seven),getActivity().getResources().getDrawable(R.mipmap.number_seven)));
+        models.add(new Colors(getActivity().getResources().getString(R.string.numbers_eng_eight),getActivity().getResources().getString(R.string.numbers_mi_eight),getActivity().getResources().getDrawable(R.mipmap.number_eight)));
+        models.add(new Colors(getActivity().getResources().getString(R.string.numbers_eng_nine),getActivity().getResources().getString(R.string.numbers_mi_nine),getActivity().getResources().getDrawable(R.mipmap.number_nine)));
+        models.add(new Colors(getActivity().getResources().getString(R.string.numbers_eng_ten),getActivity().getResources().getString(R.string.numbers_mi_ten),getActivity().getResources().getDrawable(R.mipmap.number_ten)));
 
         recyclerView.setHasFixedSize(true);
         RecyclerView.LayoutManager mLayoutManager = new LinearLayoutManager(getActivity().getApplicationContext());
         recyclerView.setLayoutManager(mLayoutManager);
-
+        mAdapter = new ColorsAdapter(getActivity().getApplicationContext(),models);
         recyclerView.setAdapter(mAdapter);
 
-        recyclerView.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
 
-            }
-        });
-        prepareModelData();
-
-
-        return rootView;
-    }
-
-    private void prepareModelData() {
-
-        ArrayList<Model> models = new ArrayList<>();
-        models.add(new Model(String.valueOf(R.string.numbers_eng_one),String.valueOf(R.string.numbers_mi_one),String.valueOf(R.mipmap.number_one)));
-        models.add(new Model(String.valueOf(R.string.numbers_eng_two),String.valueOf(R.string.numbers_mi_two),String.valueOf(R.mipmap.number_two)));
-        models.add(new Model(String.valueOf(R.string.numbers_eng_three),String.valueOf(R.string.numbers_mi_three),String.valueOf(R.mipmap.number_three)));
-        models.add(new Model(String.valueOf(R.string.numbers_eng_four),String.valueOf(R.string.numbers_mi_four),String.valueOf(R.mipmap.number_four)));
-        models.add(new Model(String.valueOf(R.string.numbers_eng_five),String.valueOf(R.string.numbers_mi_five),String.valueOf(R.mipmap.number_five)));
-        models.add(new Model(String.valueOf(R.string.numbers_eng_six),String.valueOf(R.string.numbers_mi_six),String.valueOf(R.mipmap.number_six)));
-        models.add(new Model(String.valueOf(R.string.numbers_eng_seven),String.valueOf(R.string.numbers_mi_seven),String.valueOf(R.mipmap.number_seven)));
-        models.add(new Model(String.valueOf(R.string.numbers_eng_eight),String.valueOf(R.string.numbers_mi_eight),String.valueOf(R.mipmap.number_eight)));
-        models.add(new Model(String.valueOf(R.string.numbers_eng_nine),String.valueOf(R.string.numbers_mi_nine),String.valueOf(R.mipmap.number_nine)));
-        models.add(new Model(String.valueOf(R.string.numbers_eng_ten),String.valueOf(R.string.numbers_mi_ten),String.valueOf(R.mipmap.number_ten)));
-
-
-//        ad.notifyDataSetChanged();
     }
 
 }
