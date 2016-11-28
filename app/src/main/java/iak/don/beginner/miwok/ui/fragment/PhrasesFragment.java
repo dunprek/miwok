@@ -51,7 +51,7 @@ public class PhrasesFragment extends Fragment{
         return rootView;
     }
     private void prepareModelData() {
-        ArrayList<Model> models = new ArrayList<>();
+
         models.add(new Model(String.valueOf(R.string.phrases_eng_where_are_you),String.valueOf(R.string.phrases_mi_where_are_you)));
         models.add(new Model(String.valueOf(R.string.phrases_eng_what_is_your),String.valueOf(R.string.phrases_mi_what_is_your)));
         models.add(new Model(String.valueOf(R.string.phrases_eng_my_name_is),String.valueOf(R.string.phrases_mi_my_name_is)));
