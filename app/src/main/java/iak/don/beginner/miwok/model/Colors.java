@@ -6,51 +6,55 @@ import android.graphics.drawable.Drawable;
  * Created by don on 11/29/2016.
  */
 public class Colors {
-    private String english;
-    private String miwok;
-    private Drawable image;
-    private String audio;
+    private int english;
+    private int miwok;
+    private int image;
+    private int audio;
 
-    public String getAudio() {
+
+    public int getAudio() {
         return audio;
     }
 
-    public void setAudio(String audio) {
+    public void setAudio(int audio) {
         this.audio = audio;
     }
 
-    public Colors(String english, String miwok, Drawable image) {
+    public Colors(int english, int miwok, int image,int audio) {
         this.english = english;
         this.miwok = miwok;
         this.image = image;
+        this.audio = audio;
+
     }
 
-    public Colors(String english, String miwok) {
+    public Colors(int english, int miwok,int audio) {
         this.english = english;
         this.miwok = miwok;
+        this.audio = audio;
     }
 
-    public Drawable getImage() {
+    public int getImage() {
         return image;
     }
 
-    public void setImage(Drawable image) {
+    public void setImage(int image) {
         this.image = image;
     }
 
-    public String getEnglish() {
+    public int getEnglish() {
         return english;
     }
 
-    public void setEnglish(String english) {
+    public void setEnglish(int english) {
         this.english = english;
     }
 
-    public String getMiwok() {
+    public int getMiwok() {
         return miwok;
     }
 
-    public void setMiwok(String miwok) {
+    public void setMiwok(int miwok) {
         this.miwok = miwok;
     }
 }

@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">miwok</string>
+    <string name="app_name">IAK Beginner Miwok</string>
     <string name="alert_title">Peringatan</string>
     <string name="close">Tutup</string>
 
@@ -89,4 +89,8 @@
     <string name="phrases.mi_im_coming">Im coming.</string>
     <string name="phrases.mi_lets_go">Lets go.</string>
     <string name="phrases.mi_come_here">Come here.</string>
+    <string name="category_numbers">Numbers</string>
+    <string name="category_family">Family</string>
+    <string name="category_colors">Colors</string>
+    <string name="category_phrases">Phrases</string>
 </resources>

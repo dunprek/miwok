@@ -38,21 +38,20 @@ public class PhrasesFragment extends Fragment{
     }
     private void preparePhrasesData() {
         ArrayList<Colors> models = new ArrayList<>();
-        models.add(new Colors(getActivity().getString(R.string.phrases_eng_where_are_you),getActivity().getString(R.string.phrases_mi_where_are_you)));
-        models.add(new Colors(getActivity().getString(R.string.phrases_eng_what_is_your),getActivity().getString(R.string.phrases_mi_what_is_your)));
-        models.add(new Colors(getActivity().getString(R.string.phrases_eng_my_name_is),getActivity().getString(R.string.phrases_mi_my_name_is)));
-        models.add(new Colors(getActivity().getString(R.string.phrases_eng_how_are_you),getActivity().getString(R.string.colors_mi_red)));
-        models.add(new Colors(getActivity().getString(R.string.phrases_eng_feeling_good),getActivity().getString(R.string.phrases_mi_how_are_you)));
-        models.add(new Colors(getActivity().getString(R.string.phrases_eng_are_you),getActivity().getString(R.string.phrases_mi_are_you)));
-        models.add(new Colors(getActivity().getString(R.string.phrases_eng_yes_im),getActivity().getString(R.string.phrases_mi_yes_im)));
-        models.add(new Colors(getActivity().getString(R.string.phrases_eng_im_coming),getActivity().getString(R.string.phrases_mi_im_coming)));
-        models.add(new Colors(getActivity().getString(R.string.phrases_eng_lets_go),getActivity().getString(R.string.phrases_mi_lets_go)));
-        models.add(new Colors(getActivity().getString(R.string.phrases_eng_come_here),getActivity().getString(R.string.phrases_mi_come_here)));
+        models.add(new Colors(R.string.phrases_eng_where_are_you,R.string.phrases_mi_where_are_you,R.raw.phrase_where_are_you_going));
+        models.add(new Colors(R.string.phrases_eng_what_is_your,R.string.phrases_mi_what_is_your,R.raw.phrase_what_is_your_name));
+        models.add(new Colors(R.string.phrases_eng_my_name_is,R.string.phrases_mi_my_name_is,R.raw.phrase_my_name_is));
+        models.add(new Colors(R.string.phrases_eng_how_are_you,R.string.colors_mi_red,R.raw.phrase_how_are_you_feeling));
+        models.add(new Colors(R.string.phrases_eng_feeling_good,R.string.phrases_mi_how_are_you,R.raw.phrase_im_feeling_good));
+        models.add(new Colors(R.string.phrases_eng_are_you,R.string.phrases_mi_are_you,R.raw.phrase_are_you_coming));
+        models.add(new Colors(R.string.phrases_eng_yes_im,R.string.phrases_mi_yes_im,R.raw.phrase_im_coming));
+        models.add(new Colors(R.string.phrases_eng_im_coming,R.string.phrases_mi_im_coming,R.raw.phrase_yes_im_coming));
+        models.add(new Colors(R.string.phrases_eng_lets_go,R.string.phrases_mi_lets_go,R.raw.phrase_lets_go));
+        models.add(new Colors(R.string.phrases_eng_come_here,R.string.phrases_mi_come_here,R.raw.phrase_come_here));
         recyclerView.setHasFixedSize(true);
         RecyclerView.LayoutManager mLayoutManager = new LinearLayoutManager(getActivity().getApplicationContext());
         recyclerView.setLayoutManager(mLayoutManager);
-        mAdapter = new ColorsAdapter(getActivity().getApplicationContext(),models);
+        mAdapter = new ColorsAdapter(getActivity().getApplicationContext(),models,R.color.colorPhrases);
         recyclerView.setAdapter(mAdapter);
-
     }
 }
