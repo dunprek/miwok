@@ -45,7 +45,7 @@ public class NumbersFragment extends Fragment{
         
         ArrayList<Colors> models = new ArrayList<>();
         models.add(new Colors(R.string.numbers_eng_one,R.string.numbers_mi_one,R.mipmap.number_one,R.raw.number_one));
-        models.add(new Colors(R.string.numbers_eng_two,R.string.numbers_mi_two,R.mipmap.number_ten,R.raw.number_two));
+        models.add(new Colors(R.string.numbers_eng_two,R.string.numbers_mi_two,R.mipmap.number_two,R.raw.number_two));
         models.add(new Colors(R.string.numbers_eng_three,R.string.numbers_mi_three,R.mipmap.number_three,R.raw.number_three));
         models.add(new Colors(R.string.numbers_eng_four,R.string.numbers_mi_four,R.mipmap.number_four,R.raw.number_four));
         models.add(new Colors(R.string.numbers_eng_five,R.string.numbers_mi_five,R.mipmap.number_five,R.raw.number_five));

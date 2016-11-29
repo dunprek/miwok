@@ -15,25 +15,14 @@ import iak.don.beginner.miwok.ui.fragment.PhrasesFragment;
  * Created by don on 11/29/2016.
  */
 public class CategoryAdapter extends FragmentPagerAdapter {
-
-    /** Context of the app */
     private Context mContext;
 
-    /**
-     * Create a new {@link CategoryAdapter} object.
-     *
-     * @param context is the context of the app
-     * @param fm is the fragment manager that will keep each fragment's state in the adapter
-     *           across swipes.
-     */
     public CategoryAdapter(Context context, FragmentManager fm) {
         super(fm);
         mContext = context;
     }
 
-    /**
-     * Return the {@link Fragment} that should be displayed for the given page number.
-     */
+
     @Override
     public Fragment getItem(int position) {
         if (position == 0) {
@@ -47,9 +36,7 @@ public class CategoryAdapter extends FragmentPagerAdapter {
         }
     }
 
-    /**
-     * Return the total number of pages.
-     */
+
     @Override
     public int getCount() {
         return 4;

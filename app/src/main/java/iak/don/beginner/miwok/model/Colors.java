@@ -20,7 +20,7 @@ public class Colors {
         this.audio = audio;
     }
 
-    public Colors(int english, int miwok, int image,int audio) {
+    public Colors(int miwok, int english, int image,int audio) {
         this.english = english;
         this.miwok = miwok;
         this.image = image;
@@ -28,7 +28,7 @@ public class Colors {
 
     }
 
-    public Colors(int english, int miwok,int audio) {
+    public Colors(int miwok, int english,int audio) {
         this.english = english;
         this.miwok = miwok;
         this.audio = audio;

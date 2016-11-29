@@ -3,8 +3,11 @@
     <string name="alert_title">Peringatan</string>
     <string name="close">Tutup</string>
 
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <!--Category-->
+    <string name="category_numbers">Numbers</string>
+    <string name="category_family">Family</string>
+    <string name="category_colors">Colors</string>
+    <string name="category_phrases">Phrases</string>
 
     <!--Family-->
     <string name="family.eng_father">father</string>
@@ -73,24 +76,21 @@
     <string name="phrases.eng_what_is_your">What is your name?</string>
     <string name="phrases.eng_my_name_is">My name is...</string>
     <string name="phrases.eng_how_are_you">How are you feeling?</string>
-    <string name="phrases.eng_feeling_good">Im Feeling good.</string>
+    <string name="phrases.eng_feeling_good">I\'m Feeling good.</string>
     <string name="phrases.eng_are_you">Are you coming?</string>
-    <string name="phrases.eng_yes_im">Yes, Im coming.</string>
-    <string name="phrases.eng_im_coming">Im coming.</string>
-    <string name="phrases.eng_lets_go">Lets go.</string>
+    <string name="phrases.eng_yes_im">Yes, I\'m coming.</string>
+    <string name="phrases.eng_im_coming">I\'coming.</string>
+    <string name="phrases.eng_lets_go">Let\'s go.</string>
     <string name="phrases.eng_come_here">Come here.</string>
-    <string name="phrases.mi_where_are_you">Where are you going?</string>
-    <string name="phrases.mi_what_is_your">What is your name?</string>
-    <string name="phrases.mi_my_name_is">My name is...</string>
-    <string name="phrases.mi_how_are_you">How are you feeling?</string>
-    <string name="phrases.mi_feeling_good">Im Feeling good.</string>
-    <string name="phrases.mi_are_you">Are you coming?</string>
-    <string name="phrases.mi_yes_im">Yes, Im coming.</string>
-    <string name="phrases.mi_im_coming">Im coming.</string>
-    <string name="phrases.mi_lets_go">Lets go.</string>
-    <string name="phrases.mi_come_here">Come here.</string>
-    <string name="category_numbers">Numbers</string>
-    <string name="category_family">Family</string>
-    <string name="category_colors">Colors</string>
-    <string name="category_phrases">Phrases</string>
+    <string name="phrases.mi_where_are_you">minto wuksus</string>
+    <string name="phrases.mi_what_is_your">tinnә oyaase\'nә</string>
+    <string name="phrases.mi_my_name_is">oyaaset...</string>
+    <string name="phrases.mi_how_are_you">michәksәs?</string>
+    <string name="phrases.mi_feeling_good">kuchi achit</string>
+    <string name="phrases.mi_are_you">әәnәs\'aa?</string>
+    <string name="phrases.mi_yes_im">hәә\' әәnәm</string>
+    <string name="phrases.mi_im_coming">әәnәm</string>
+    <string name="phrases.mi_lets_go">yoowutis</string>
+    <string name="phrases.mi_come_here">әnni\'nem</string>
+
 </resources>
