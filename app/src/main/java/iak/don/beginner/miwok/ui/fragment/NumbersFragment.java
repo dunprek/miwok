@@ -22,7 +22,7 @@ public class NumbersFragment extends Fragment{
     private LinearLayout ll;
 
     public NumbersFragment() {
-        // Required empty public constructor
+        // empty constructor
     }
 
     @Override

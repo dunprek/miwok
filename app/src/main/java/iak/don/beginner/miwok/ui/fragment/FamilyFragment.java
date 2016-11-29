@@ -24,7 +24,7 @@ public class FamilyFragment extends Fragment{
 
 
     public FamilyFragment() {
-        // Required empty public constructor
+        // empty constructor
     }
 
     @Override

@@ -26,7 +26,7 @@ public class ColorsFragment extends Fragment  {
 
 
     public ColorsFragment() {
-        // Required empty public constructor
+        // empty constructor
     }
 
     @Override

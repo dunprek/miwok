@@ -17,15 +17,19 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        //set toolbar
         toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
+//        set viewpager
         ViewPager viewPager = (ViewPager) findViewById(R.id.viewpager);
 
+//        set adapter call
         CategoryAdapter adapter = new CategoryAdapter(this, getSupportFragmentManager());
 
         viewPager.setAdapter(adapter);
 
+//        setTab
         TabLayout tabLayout = (TabLayout) findViewById(R.id.tabs);
 
         tabLayout.setupWithViewPager(viewPager);

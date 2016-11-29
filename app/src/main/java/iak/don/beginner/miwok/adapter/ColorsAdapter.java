@@ -70,6 +70,7 @@ public class ColorsAdapter extends RecyclerView.Adapter<ColorsAdapter.ViewHolder
             iv = (ImageView) itemView.findViewById(R.id.iv);
             linearLayout = (LinearLayout) itemView.findViewById(R.id.llBackground);
 
+
         }
 
 
@@ -88,9 +89,19 @@ public class ColorsAdapter extends RecyclerView.Adapter<ColorsAdapter.ViewHolder
 
     @Override
     public void onBindViewHolder(ViewHolder viewHolder, final int position) {
-        viewHolder.tvMiwok.setText(data.get(position).getMiwok());
-        viewHolder.tvEnglish.setText(data.get(position).getEnglish());
-        viewHolder.iv.setImageResource(data.get(position).getImage());
+
+        if (mColorResourceId == R.color.colorPhrases){
+            viewHolder.iv.setVisibility(View.GONE);
+            viewHolder.tvMiwok.setText(data.get(position).getMiwok());
+            viewHolder.tvEnglish.setText(data.get(position).getEnglish());
+            viewHolder.linearLayout.setBackgroundResource(mColorResourceId);
+        }else{
+            viewHolder.tvMiwok.setText(data.get(position).getMiwok());
+            viewHolder.tvEnglish.setText(data.get(position).getEnglish());
+            viewHolder.linearLayout.setBackgroundResource(mColorResourceId);
+            viewHolder.iv.setImageResource(data.get(position).getImage());
+        }
+
 
 
         viewHolder.itemView.setOnClickListener(new View.OnClickListener() {

@@ -1,6 +1,5 @@
 package iak.don.beginner.miwok.model;
 
-import android.graphics.drawable.Drawable;
 
 /**
  * Created by don on 11/29/2016.

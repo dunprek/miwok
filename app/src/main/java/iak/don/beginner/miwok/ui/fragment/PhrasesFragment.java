@@ -19,7 +19,7 @@ public class PhrasesFragment extends Fragment{
     private RecyclerView recyclerView;
     private ColorsAdapter mAdapter;
     public PhrasesFragment() {
-        // Required empty public constructor
+        // empty constructor
     }
 
     @Override
@@ -48,6 +48,7 @@ public class PhrasesFragment extends Fragment{
         models.add(new Colors(R.string.phrases_eng_im_coming,R.string.phrases_mi_im_coming,R.raw.phrase_yes_im_coming));
         models.add(new Colors(R.string.phrases_eng_lets_go,R.string.phrases_mi_lets_go,R.raw.phrase_lets_go));
         models.add(new Colors(R.string.phrases_eng_come_here,R.string.phrases_mi_come_here,R.raw.phrase_come_here));
+
         recyclerView.setHasFixedSize(true);
         RecyclerView.LayoutManager mLayoutManager = new LinearLayoutManager(getActivity().getApplicationContext());
         recyclerView.setLayoutManager(mLayoutManager);
